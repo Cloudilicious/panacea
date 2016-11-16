@@ -8,9 +8,11 @@
       <th>User</th>
       <th>First name</th>
       <th>Last name</th>
+      <th>Address</th>
+      <!-- <th>S</th> -->
       <th>Suburb</th>
-      <th>Medicare</th>
-      <th>Concession</th>
+      <th>Medicare no</th>
+      <th>Concession no</th>
       <th>Date of birth</th>
       <th>Sex</th>
       <th colspan="3"></th>
@@ -20,12 +22,14 @@
   <tbody>
     <% @profiles.each do |profile| %>
       <tr>
-        <td><%= profile.user_id %></td>
+        <td><%= profile.user.email %></td>
         <td><%= profile.first_name %></td>
         <td><%= profile.last_name %></td>
+        <td><%= profile.address %></td>
+        <!-- <td><%= profile.s %></td> -->
         <td><%= profile.suburb %></td>
-        <td><%= profile.medicare %></td>
-        <td><%= profile.concession %></td>
+        <td><%= profile.medicare_no %></td>
+        <td><%= profile.concession_no %></td>
         <td><%= profile.date_of_birth %></td>
         <td><%= profile.sex %></td>
         <td><%= link_to 'Show', profile %></td>

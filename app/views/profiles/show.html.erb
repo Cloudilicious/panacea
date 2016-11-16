@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @profile.user_id %>
+  <%= @profile.user.email %>
 </p>
 
 <p>
@@ -16,18 +16,28 @@
 </p>
 
 <p>
+  <strong>Address:</strong>
+  <%= @profile.address %>
+</p>
+
+<!-- <p>
+  <strong>S:</strong>
+  <%= @profile.s %>
+</p> -->
+
+<p>
   <strong>Suburb:</strong>
   <%= @profile.suburb %>
 </p>
 
 <p>
-  <strong>Medicare:</strong>
-  <%= @profile.medicare %>
+  <strong>Medicare no:</strong>
+  <%= @profile.medicare_no %>
 </p>
 
 <p>
-  <strong>Concession:</strong>
-  <%= @profile.concession %>
+  <strong>Concession no:</strong>
+  <%= @profile.concession_no %>
 </p>
 
 <p>

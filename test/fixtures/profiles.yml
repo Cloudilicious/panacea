@@ -1,21 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: one
+  user: one
   first_name: MyString
   last_name: MyString
+  address: MyString
+  s: MyString
   suburb: MyString
-  medicare: MyString
-  concession: MyString
-  date_of_birth: 2016-11-16 12:15:20
+  medicare_no: MyString
+  concession_no: MyString
+  date_of_birth: 2016-11-16
   sex: MyString
 
 two:
-  user_id: two
+  user: two
   first_name: MyString
   last_name: MyString
+  address: MyString
+  s: MyString
   suburb: MyString
-  medicare: MyString
-  concession: MyString
-  date_of_birth: 2016-11-16 12:15:20
+  medicare_no: MyString
+  concession_no: MyString
+  date_of_birth: 2016-11-16
   sex: MyString

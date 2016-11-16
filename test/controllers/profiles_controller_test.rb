@@ -17,7 +17,7 @@ class ProfilesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create profile" do
     assert_difference('Profile.count') do
-      post profiles_url, params: { profile: { concession: @profile.concession, date_of_birth: @profile.date_of_birth, first_name: @profile.first_name, last_name: @profile.last_name, medicare: @profile.medicare, sex: @profile.sex, suburb: @profile.suburb, user_id_id: @profile.user_id_id } }
+      post profiles_url, params: { profile: { address: @profile.address, concession_no: @profile.concession_no, date_of_birth: @profile.date_of_birth, first_name: @profile.first_name, last_name: @profile.last_name, medicare_no: @profile.medicare_no, s: @profile.s, sex: @profile.sex, suburb: @profile.suburb, user_id: @profile.user_id } }
     end
 
     assert_redirected_to profile_url(Profile.last)
@@ -34,7 +34,7 @@ class ProfilesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update profile" do
-    patch profile_url(@profile), params: { profile: { concession: @profile.concession, date_of_birth: @profile.date_of_birth, first_name: @profile.first_name, last_name: @profile.last_name, medicare: @profile.medicare, sex: @profile.sex, suburb: @profile.suburb, user_id_id: @profile.user_id_id } }
+    patch profile_url(@profile), params: { profile: { address: @profile.address, concession_no: @profile.concession_no, date_of_birth: @profile.date_of_birth, first_name: @profile.first_name, last_name: @profile.last_name, medicare_no: @profile.medicare_no, s: @profile.s, sex: @profile.sex, suburb: @profile.suburb, user_id: @profile.user_id } }
     assert_redirected_to profile_url(@profile)
   end
 
