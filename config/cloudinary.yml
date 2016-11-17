@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: ddmgvofvv
+  api_key: '121177458268598'
+  api_secret: 0Jkp05Mlvqeem0-0RUUEHwE3N90
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: ddmgvofvv
+  api_key: '121177458268598'
+  api_secret: 0Jkp05Mlvqeem0-0RUUEHwE3N90
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: ddmgvofvv
+  api_key: '121177458268598'
+  api_secret: 0Jkp05Mlvqeem0-0RUUEHwE3N90
+  enhance_image_tag: true
+  static_image_support: false

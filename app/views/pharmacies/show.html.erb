@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<% unless @user.avatar_url.nil? %>
+  <%= image_tag @user.avatar_url(:display) %><br />
+  <% end %>
+
+<p>
+  <strong>Pharmacy:</strong>
+  <%= @pharmacy.pharmacy_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pharmacy.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @pharmacy.address %>
+</p>
+
+<p>
+  <strong>Suburb:</strong>
+  <%= @pharmacy.suburb %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @pharmacy.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @pharmacy.lng %>
+</p>
+
+<p>
+  <strong>Logo url:</strong>
+  <%= @pharmacy.logo_url %>
+</p>
+
+<%= link_to 'Edit', edit_pharmacy_path(@pharmacy) %> |
+<%= link_to 'Back', pharmacies_path %>

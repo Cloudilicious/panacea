@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pharmacy_id: one
+  name: MyString
+  address: MyText
+  suburb: MyString
+  lat: 9.99
+  lng: 9.99
+  logo_url: MyString
+
+two:
+  pharmacy_id: two
+  name: MyString
+  address: MyText
+  suburb: MyString
+  lat: 9.99
+  lng: 9.99
+  logo_url: MyString
