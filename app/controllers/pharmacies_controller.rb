@@ -4,7 +4,15 @@ class PharmaciesController < ApplicationController
   # GET /pharmacies
   # GET /pharmacies.json
   def index
-    @pharmacies = Pharmacy.all
+    # @pharmacies = Pharmacy.all
+    suburb_name = params[:suburb]
+    if suburb_name.present?
+      locations = Suburb.all
+      locations = suburbs.where(name: suburb_name) if suburb_name.present?
+      @pharmacies = Pharmacy.where(suburb: locations)
+    else
+      @pharmacies = Pharmacy.all
+    end
   end
 
   # GET /pharmacies/1
@@ -70,7 +78,7 @@ class PharmaciesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pharmacy_params
-      params.require(:pharmacy).permit( :name, :address, :lat, :lng, :avatar)
+      params.require(:pharmacy).permit( :name, :address, :suburb_id, :lat, :lng)
       # removed :pharmacy_id_id,
     end
 end

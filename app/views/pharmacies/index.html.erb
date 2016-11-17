@@ -9,6 +9,7 @@
       <th>Logo</th>
       <th>Pharmacy Name</th>
       <th>Address</th>
+      <th>Suburb</th>
       <th>Lat</th>
       <th>Lng</th>
       <th colspan="3"></th>
@@ -23,6 +24,7 @@
         <td><%= image_tag pharmacy.avatar_url(:thumbnail) %></td>
         <td><%= pharmacy.name %></td>
         <td><%= pharmacy.address %></td>
+        <td><%= pharmacy.suburb %></td>
         <td><%= pharmacy.lat %></td>
         <td><%= pharmacy.lng %></td>
         <td><%= link_to 'Show', pharmacy %></td>

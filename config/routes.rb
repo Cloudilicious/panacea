@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :suburbs
   resources :pharmacies
   resources :profiles
   devise_for :users
