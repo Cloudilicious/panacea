@@ -11,10 +11,10 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :pharmacy_id_id %>
-    <%= f.text_field :pharmacy_id_id %>
-  </div>
+  <!-- <div class="field">
+    <%#= f.label :pharmacy_id_id %>
+    <%#= f.text_field :pharmacy_id_id %>
+  </div> -->
 
   <div class="field">
     <%= f.label :name %>
@@ -26,10 +26,10 @@
     <%= f.text_area :address %>
   </div>
 
-  <div class="field">
-    <%= f.label :suburb %>
-    <%= f.text_field :suburb %>
-  </div>
+  <!-- <div class="field">
+    <%#= f.label :suburb %>
+    <%#= f.text_field :suburb %>
+  </div> -->
 
   <div class="field">
     <%= f.label :lat %>
@@ -42,8 +42,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :logo_url %>
-    <%= f.text_field :logo_url %>
     <%= cloudinary_js_config %>
     <legend>Avatar</legend>
     <%= f.file_field :avatar %>

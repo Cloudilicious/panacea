@@ -70,7 +70,7 @@ class PharmaciesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pharmacy_params
-      params.require(:pharmacy).permit( :name, :address, :suburb, :lat, :lng, :logo_url)
+      params.require(:pharmacy).permit( :name, :address, :lat, :lng, :avatar)
       # removed :pharmacy_id_id,
     end
 end

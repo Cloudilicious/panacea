@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_one :profile
   has_one :pharmacy
-
-  attr_accessor :avatar
-
+  # attr_accessor :avatar
+  # mount_uploader :avatar, AvatarUploader
 end

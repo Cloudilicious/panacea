@@ -13,16 +13,17 @@
 ActiveRecord::Schema.define(version: 20161117000757) do
 
   create_table "pharmacies", force: :cascade do |t|
-    t.integer  "pharmacy_id_id"
+    t.integer  "user_id"
     t.string   "name"
     t.text     "address"
-    t.string   "suburb"
-    t.decimal  "lat",            precision: 9, scale: 6
-    t.decimal  "lng",            precision: 9, scale: 6
-    t.string   "logo_url"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.index ["pharmacy_id_id"], name: "index_pharmacies_on_pharmacy_id_id"
+    t.integer  "suburb_id"
+    t.decimal  "lat",        precision: 9, scale: 6
+    t.decimal  "lng",        precision: 9, scale: 6
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.string   "avatar"
+    t.index ["suburb_id"], name: "index_pharmacies_on_suburb_id"
+    t.index ["user_id"], name: "index_pharmacies_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -54,7 +55,6 @@ ActiveRecord::Schema.define(version: 20161117000757) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

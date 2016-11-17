@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<% unless @user.avatar_url.nil? %>
-  <%= image_tag @user.avatar_url(:display) %><br />
+
+
+<% unless @pharmacy.avatar_url.nil? %>
+  <%= image_tag @pharmacy.avatar_url(:display) %><br />
   <% end %>
 
 <p>
   <strong>Pharmacy:</strong>
-  <%= @pharmacy.pharmacy_id %>
+  <%= @pharmacy.id %>
 </p>
 
 <p>
@@ -19,10 +21,10 @@
   <%= @pharmacy.address %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Suburb:</strong>
-  <%= @pharmacy.suburb %>
-</p>
+  <%#= @pharmacy.suburb %>
+</p> -->
 
 <p>
   <strong>Lat:</strong>
@@ -34,10 +36,6 @@
   <%= @pharmacy.lng %>
 </p>
 
-<p>
-  <strong>Logo url:</strong>
-  <%= @pharmacy.logo_url %>
-</p>
 
 <%= link_to 'Edit', edit_pharmacy_path(@pharmacy) %> |
 <%= link_to 'Back', pharmacies_path %>
