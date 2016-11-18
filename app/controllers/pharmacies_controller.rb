@@ -1,6 +1,8 @@
 class PharmaciesController < ApplicationController
   before_action :set_pharmacy, only: [:show, :edit, :update, :destroy]
 
+  skip_before_action :authenticate_user!
+
   # GET /pharmacies
   # GET /pharmacies.json
   def index
@@ -34,6 +36,8 @@ class PharmaciesController < ApplicationController
   def create
     @pharmacy = Pharmacy.new(pharmacy_params)
     @pharmacy.user = current_user
+
+    debugger
 
     respond_to do |format|
       if @pharmacy.save
@@ -78,7 +82,7 @@ class PharmaciesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pharmacy_params
-      params.require(:pharmacy).permit( :name, :address, :suburb_id, :lat, :lng)
+      params.require(:pharmacy).permit( :name, :address, :suburb_id, :avatar, :lat, :lng)
       # removed :pharmacy_id_id,
     end
 end

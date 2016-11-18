@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+# Pharmacy.create!([
+#   { name: 'Independent' },
+#   { name: 'Big Pharma Corp'}
+#   ])
 Suburb.create!([
   { name: 'Melbourne' },
   { name: 'Doncaster' },
@@ -14,5 +19,5 @@ Suburb.create!([
   { name: 'Footscray' },
   { name: 'Geelong'},
   { name: 'Preston'},
-  { name: 'Elsternwick'},
+  { name: 'Elsternwick'}
 ])

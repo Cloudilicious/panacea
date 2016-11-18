@@ -31,14 +31,16 @@ ActiveRecord::Schema.define(version: 20161117050952) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "address"
-    t.string   "s"
-    t.string   "suburb"
+    t.integer  "suburb_id"
+    t.integer  "allergy_id"
     t.string   "medicare_no"
     t.string   "concession_no"
     t.date     "date_of_birth"
     t.string   "sex"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["allergy_id"], name: "index_profiles_on_allergy_id"
+    t.index ["suburb_id"], name: "index_profiles_on_suburb_id"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
