@@ -10,5 +10,6 @@ class CreatePharmacies < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_index :pharmacies, :address, unique: true
   end
 end

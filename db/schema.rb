@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20161117050952) do
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
     t.string   "avatar"
+    t.index ["address"], name: "index_pharmacies_on_address", unique: true
     t.index ["suburb_id"], name: "index_pharmacies_on_suburb_id"
     t.index ["user_id"], name: "index_pharmacies_on_user_id"
   end

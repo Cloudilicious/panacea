@@ -37,8 +37,6 @@ class PharmaciesController < ApplicationController
     @pharmacy = Pharmacy.new(pharmacy_params)
     @pharmacy.user = current_user
 
-    debugger
-
     respond_to do |format|
       if @pharmacy.save
         format.html { redirect_to @pharmacy, notice: 'Pharmacy was successfully created.' }
