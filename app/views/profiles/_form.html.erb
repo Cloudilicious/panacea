@@ -38,7 +38,8 @@
 
   <div class="field">
     <%= f.label :suburb %>
-    <%= f.text_field :suburb_id %>
+    <!-- <%= f.text_field :suburb_id %> -->
+    <%= f.collection_select :suburb_id, Suburb.order(:name),:id,:name, include_blank: true %>
   </div>
 
   <div class="field">

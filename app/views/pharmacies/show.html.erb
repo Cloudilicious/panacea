@@ -36,6 +36,9 @@
   <%= @pharmacy.lng %>
 </p>
 
+<div>
+  <%= render partial: 'map_embed', locals: {lat: @pharmacy.lat, lng: @pharmacy.lng } %>
+</div>
 
 <%= link_to 'Edit', edit_pharmacy_path(@pharmacy) %> |
 <%= link_to 'Back', pharmacies_path %>
