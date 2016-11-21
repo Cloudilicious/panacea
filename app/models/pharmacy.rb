@@ -4,14 +4,14 @@ class Pharmacy < ApplicationRecord
 
   validates :address, presence: true
 
-  geocoded_by :address, latitude: :lat, longitude: :lng
+  geocoded_by :full_address, latitude: :lat, longitude: :lng
   after_validation :geocode
 
   attr_accessor :avatar
   mount_uploader :avatar, AvatarUploader
 
-  # def address(prefix = nil)
-  #   [address, suburb.name].select(&:present?).(', ')
-  # end
+  def full_address
+    [address, suburb.name].join(', ')
+  end
 
 end
