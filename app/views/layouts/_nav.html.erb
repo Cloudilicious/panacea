@@ -2,12 +2,22 @@
   <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>
   <br>
-    <%= link_to "Create profile", new_profile_path %> |
-    <!-- May need to add css class -->
-    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% if current_user.role.pharmacy? %>
+      <%= link_to "Create pharmacy", new_pharmacy_path %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% elsif current_user.role.patient? %>
+      <%= link_to "Create profile", new_profile_path %> |
+      <!-- May need to add css class -->
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% end %>
   <% else %>
     <%= link_to "Sign up", new_user_registration_path %> |
     <%= link_to "Login", new_user_session_path %>
   <% end %>
   <br><br>
+
+  <%# if current_user.has_role? :pharmacy %>
+    <%#= link_to "Manage Pharmacy", pharmacy_path %>
+  <%# end %>
+
 </nav>

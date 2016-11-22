@@ -19,6 +19,17 @@
 
     <%= render partial: 'layouts/nav' %>
 
+
+
+    <%# unless current_user.profile.blank? %>
+    <%#= render partial: 'layouts/form', profile: @profile %>
+    <%# end %>
+
+    <!-- <% unless @user.blank? %>
+    Email:<%#= @user.email %><br />
+    Member Since:<%#= @user.created_at  %><br />
+    <% end %> -->
+
     <%= yield %>
   </body>
 </html>

@@ -27,3 +27,7 @@ h1 {
   text-transform: uppercase;;
   letter-spacing: 0.5em;
 }
+
+.actions {
+  border-style:dashed;
+}
