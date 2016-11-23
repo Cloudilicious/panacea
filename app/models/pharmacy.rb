@@ -1,6 +1,7 @@
 class Pharmacy < ApplicationRecord
   belongs_to :user
   belongs_to :suburb
+  has_many :booking
 
   validates :address, presence: true
 
@@ -12,6 +13,10 @@ class Pharmacy < ApplicationRecord
 
   def full_address
     [address, suburb.name].join(', ')
+  end
+
+  def self.search(search)
+    where("suburb LIKE ?", "#{search}")
   end
 
 end

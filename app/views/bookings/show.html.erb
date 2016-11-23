@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @booking.profile %>
+</p>
+
+<p>
+  <strong>Pharmacy:</strong>
+  <%= @booking.pharmacy %>
+</p>
+
+<p>
+  <strong>Appointment:</strong>
+  <%= @booking.appointment %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

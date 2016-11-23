@@ -2,25 +2,26 @@
 
 <h1>Pharmacies</h1>
 
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:q, "Enter a suburb:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
+<%= form_tag(pharmacies_path, method: "get") do %>
+  <%= label_tag(:q, "Find a Pharmacy") %>
+  <%= text_field_tag :search, params[:search], placeholder: "Enter a Suburb" %>
+  <%= submit_tag "Search", :name => nil %>
 <% end %>
 
+<br>
 <table>
-  <thead>
-    <tr>
+  <!-- <thead>
+    <tr> -->
       <!-- <th>Pharmacy</th> -->
-      <th>Logo</th>
+      <!-- <th>Logo</th>
       <th>Pharmacy Name</th>
       <th>Address</th>
-      <th>Suburb</th>
+      <th>Suburb</th> -->
       <!-- <th>Lat</th>
       <th>Lng</th> -->
-      <th colspan="3"></th>
+      <!-- <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> -->
 
   <tbody>
     <% @pharmacies.each do |pharmacy| %>

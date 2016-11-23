@@ -7,10 +7,11 @@ class PharmaciesController < ApplicationController
   # GET /pharmacies.json
   def index
     # @pharmacies = Pharmacy.all
-    suburb_name = params[:suburb]
+    suburb_name = params[:search]
     if suburb_name.present?
       locations = Suburb.all
-      locations = suburbs.where(name: suburb_name) if suburb_name.present?
+      # locations = Suburb.where(name: suburb_name) if suburb_name.present?
+      locations = Suburb.name_eq(suburb_name) if suburb_name.present?
       @pharmacies = Pharmacy.where(suburb: locations)
     else
       @pharmacies = Pharmacy.all

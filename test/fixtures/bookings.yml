@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  profile: one
+  pharmacy: one
+  appointment: 2016-11-22 15:29:02
+
+two:
+  profile: two
+  pharmacy: two
+  appointment: 2016-11-22 15:29:02

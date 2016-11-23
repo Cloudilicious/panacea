@@ -31,3 +31,16 @@ h1 {
 .actions {
   border-style:dashed;
 }
+
+nav {
+  width: 110%;
+
+  background-color: white;
+  position: fixed;
+  position: relative;
+  padding: 20px;
+  padding-bottom: 10px;
+  margin-top: -35px;
+  margin-left: -100px;
+
+}
