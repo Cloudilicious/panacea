@@ -15,17 +15,9 @@
     <%#= f.label :pharmacy_id_id %>
     <%#= f.text_field :pharmacy_id_id %>
   </div> -->
-  
-  <label class="amount">
-    <span>Amount: $5.00</span>
-  </label>
-  </article>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-        data-description="A month's subscription"
-        data-amount="500"
-        data-locale="auto"></script>
+
+
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -43,21 +35,24 @@
   </div>
 
   <div class="field">
-    <%= f.label :lat %>
-    <%= f.text_field :lat %>
-  </div>
-
-  <div class="field">
-    <%= f.label :lng %>
-    <%= f.text_field :lng %>
-  </div>
-
-  <div class="field">
     <%#= cloudinary_js_config %>
-    <%= f.file_field :avatar %>
+    <%= f.file_field :avatar, :class => "uploadbackground" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Pharmacy", :class => "submit-button" %>
   </div>
+
+  <label class="amount">
+    <span>Amount: $5.00</span>
+  </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-description="A month's subscription"
+        data-amount="500"
+        data-locale="auto">
+  </script>
+
 <% end %>

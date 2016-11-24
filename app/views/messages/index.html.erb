@@ -1,3 +1,7 @@
+<%# if current_user.patient? %>
+<h3>Conversation</h3>
+<%#end%>
+
 <% if @over_ten %>
  <%= link_to 'Show Previous', '?m=all' %>
 <% end %>
@@ -10,24 +14,27 @@
      <div class="header">
        <strong><%= user.display_name %></strong>     <%= message.message_time %>
      </div>
+     <br>
       <div class="list">
-       <div class="item">
+       <div class="list">
         <i class="right triangle icon"></i>
          <%= message.body %>
       </div>
     </div>
    </div>
  </div>
+ <br>
  <% end %>
 <% end %>
 </div>
 
+
 <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
  <div class=”field”>
-   <%= f.text_area :body, class: "form-control" %>
+   <%= f.text_area :body, class: "form-control", class: "messagetext" %>
  </div>
  <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
  <div>
-   <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>
+   <%= f.submit "Add Message", class: "messagebutton" %>
  </div>
 <% end %>

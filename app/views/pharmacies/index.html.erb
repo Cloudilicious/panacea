@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pharmacies</h1>
-
-<%= form_tag(pharmacies_path, method: "get") do %>
+<h2><%= form_tag(pharmacies_path, method: "get") do %>
   <%= label_tag(:q, "Find a Pharmacy") %>
-  <%= text_field_tag :search, params[:search], placeholder: "Enter a Suburb" %>
-  <%= submit_tag "Search", :name => nil %>
+  <br>
+  <%= text_field_tag :search, params[:search], placeholder: "Enter a Suburb", class: "textfield"%>
+  <br>
+  <br>
+  <%= image_submit_tag("search", size: "16")  %>
 <% end %>
-
+</h2>
 <br>
 <table>
   <!-- <thead>
@@ -23,25 +24,31 @@
     </tr>
   </thead> -->
 
-  <tbody>
+  <tbody class = "pharmacylist">
     <% @pharmacies.each do |pharmacy| %>
 
-      <tr>
-        <!-- <td><%#= pharmacy.id %></td> -->
-        <td><%= image_tag pharmacy.avatar_url(:thumbnail) %></td>
-        <td><%= pharmacy.name %></td>
-        <td><%= pharmacy.address %></td>
-        <td><%= pharmacy.suburb.name %></td>
-        <!-- <td><%#= pharmacy.lat %></td>
-        <td><%#= pharmacy.lng %></td> -->
-        <td><%= link_to 'Show', pharmacy %></td>
-        <td><%= link_to 'Edit', edit_pharmacy_path(pharmacy) %></td>
-        <td><%= link_to 'Destroy', pharmacy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <%= image_tag pharmacy.avatar_url(:thumbnail) %>
+      <br>
+      <h3 class="pharmacyname"><%= pharmacy.name %></h3>
+      <%= pharmacy.address %>,
+      <%= pharmacy.suburb.name %>
+      <br>
+      <br>
+      <%= link_to 'More Details', pharmacy, class: "messagebutton" %>
+      <br>
+      <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: pharmacy.user_id), method: :post, class: "messagebutton" %>
+      <%#= link_to 'Show', pharmacy %>
+      <%#= link_to 'Edit', edit_pharmacy_path(pharmacy) %>
+      <%#= link_to 'Destroy', pharmacy, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <br>
+      <br>
+      <br>
+
+
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Pharmacy', new_pharmacy_path %>
+<%#= link_to 'New Pharmacy', new_pharmacy_path %>

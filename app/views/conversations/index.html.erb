@@ -2,7 +2,7 @@
  <h3>Mailbox</h3>
  <div class="ui list">
   <div class="item">
-    debugger
+
    <% @conversations.each do |conversation| %>
    <% if conversation.sender_id == current_user.id ||      conversation.recipient_id == current_user.id %>
     <% if conversation.sender_id == current_user.id %>
@@ -17,15 +17,15 @@
  </div>
 </div>
 
-<div class="ui segment">
+<!-- <div class="ui segment">
  <h3>All Users</h3>
   <div class="ui list">
-   <% @users.reject{ |user| user.profile.nil? }.each do |user| %>
-    <% if user.id != current_user.id %>
+   <%# @users.reject{ |user| user.profile.nil? }.each do |user| %>
+    <%# if user.id != current_user.id %>
      <div class="item">
-   <%= user.profile.first_name %> <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post %>
+   <%#= user.display_name %> <%#= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post %>
  </div>
-  <% end %>
- <% end %>
+  <%# end %>
+ <%# end %>
  </div>
-</div>
+</div> -->
