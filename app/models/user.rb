@@ -18,3 +18,19 @@ class User < ApplicationRecord
   #   end
 
 end
+
+class User
+  def pharmacy?
+    pharmacy.present?
+  end
+
+  def display_name
+    if @user.pharmacy_id.present? || @user.profile.present?
+      if pharmacy?
+        pharmacy.name
+      else
+        profile.first_name
+      end
+    end
+  end
+end

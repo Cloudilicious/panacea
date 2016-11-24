@@ -1,19 +1,20 @@
 <nav>
   <!-- class="navbar-text pull-right" -->
   <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>
+  Logged in as <%= current_user.email %>
+  <br>
   <br>
     <% if current_user.role.pharmacy? %>
-      <%= link_to "Create pharmacy", new_pharmacy_path %>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <%= link_to "Create pharmacy", new_pharmacy_path, :class => "navbutton" %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "navbutton" %>
     <% elsif current_user.role.patient? %>
-      <%= link_to "Create profile", new_profile_path %> |
+      <%= link_to "Create profile", new_profile_path, :class => "navbutton" %>
       <!-- May need to add css class -->
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "navbutton" %>
     <% end %>
   <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> |
-    <%= link_to "Login", new_user_session_path %>
+    <%= link_to "Sign up", new_user_registration_path, :class => "navbutton"%>
+    <%= link_to "Login", new_user_session_path, :class => "navbutton" %>
   <% end %>
   <br><br>
 

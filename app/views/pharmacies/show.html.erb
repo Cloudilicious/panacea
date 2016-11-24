@@ -21,9 +21,14 @@
   <%= @pharmacy.suburb.name %>
 </p>
 
+<p>
+
+</p>
+
 <div>
   <%= render partial: 'map_embed', locals: {lat: @pharmacy.lat, lng: @pharmacy.lng } %>
 </div>
 
+<%#= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: @pharmacy.id), method: :post %>
 <%= link_to 'Edit', edit_pharmacy_path(@pharmacy) %> |
 <%= link_to 'Back', pharmacies_path %>
