@@ -9,6 +9,11 @@
   </head>
 
   <body>
+
+
+    <%= render partial: 'layouts/nav' %>
+
+  <div>
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
       <!-- Can change class name after if required (copied from tutorial) -->
@@ -16,10 +21,7 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-
-    <%= render partial: 'layouts/nav' %>
-
-
+  </div>
 
 
 

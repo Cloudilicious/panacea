@@ -34,6 +34,7 @@ gem 'carrierwave'
 # gem 'capistrano-rails', group: :development
 gem 'geocoder'
 gem 'opentok', '~> 2.3'
+gem 'stripe'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

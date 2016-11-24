@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'registrations/create'
   get 'registrations/update'
 
+  resources :charges
   resources :suburbs
   resources :pharmacies
   resources :profiles

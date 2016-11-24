@@ -25,12 +25,10 @@ class User
   end
 
   def display_name
-    if @user.pharmacy_id.present? || @user.profile.present?
-      if pharmacy?
-        pharmacy.name
-      else
-        profile.first_name
-      end
+    if pharmacy?
+      pharmacy.name
+    else
+      profile.first_name
     end
   end
 end

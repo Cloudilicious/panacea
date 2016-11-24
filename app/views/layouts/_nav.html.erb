@@ -7,16 +7,19 @@
     <% if current_user.role.pharmacy? %>
       <%= link_to "Create pharmacy", new_pharmacy_path, :class => "navbutton" %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "navbutton" %>
+      <%= link_to "Messages", new_profile_path, :class => "navbutton" %>
     <% elsif current_user.role.patient? %>
       <%= link_to "Create profile", new_profile_path, :class => "navbutton" %>
       <!-- May need to add css class -->
       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "navbutton" %>
+      <%= link_to "Messages", new_profile_path, :class => "navbutton" %>
     <% end %>
   <% else %>
     <%= link_to "Sign up", new_user_registration_path, :class => "navbutton"%>
     <%= link_to "Login", new_user_session_path, :class => "navbutton" %>
   <% end %>
-  <br><br>
+  <br>
+
 
   <%# if current_user.has_role? :pharmacy %>
     <%#= link_to "Manage Pharmacy", pharmacy_path %>

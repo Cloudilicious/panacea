@@ -5,7 +5,7 @@
 
 <p>For tailored access to your friendly local pharmacist</p>
 
-<h2>Sign up</h2>
+<h2>Create an account</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -34,8 +34,8 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Continue", :class => "submit-button" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%#= render "devise/shared/links" %>
