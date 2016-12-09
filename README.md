@@ -45,10 +45,9 @@ ERD: [DbDesigner](https://trello-attachments.s3.amazonaws.com/5823e14fb3cc4349be
 * Ability to search/filter pharmacies by suburb
 * Display of Google map based on address
 * Incorporating payment for pharmacy profile creation
-
 * Creating an app with a look and feel that, while simple, is consistent and largely in keeping with my visual style
 * Creating an app that again, while simple, has some semblance of logical workflow for the user
-* Attending class in order to collaborate with fellow students - feeling grateful for the time and knowledge offered by others, as well as a sense of achievement when being the one that is able to provide help
+* Attending class throughout the project weeks in order to collaborate with fellow students - feeling grateful for the time and knowledge offered by others, as well as a sense of achievement when being the one that was able to provide help
 
 ### Challenges
 
