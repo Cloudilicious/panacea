@@ -9,7 +9,7 @@ The purpose of this app is to improve patient access to community pharmacy servi
 Panacea can be used for communicating with a pharmacist, from the comfort of one's own home. Using this app, pharmacies can register their business on the website. Members of the community can search for a local pharmacy and chat to an available pharmacist. 
 Future releases could include video chat functionality and the ability to purchase products and medications recommended by the pharmacist directly through the app (not including prescription medications)
 
-## Setup on Local Machine (Special Thanks to Tanim)
+### Setup on Local Machine (Special Thanks to Tanim)
 
 * Clone repository
 * Navigate into app folder
@@ -57,4 +57,4 @@ ERD: [DbDesigner](https://trello-attachments.s3.amazonaws.com/5823e14fb3cc4349be
 * Managing expectations - focussing on what is within the realm of possibility rather than being overwhelmed
 * Understanding Git process
 
-Cloudilicious thanks you for your custom
+#### Cloudilicious thanks you for your custom
