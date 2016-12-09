@@ -10,9 +10,12 @@ Panacea can be used for communicating with a pharmacist, from the comfort of one
 Future releases could include video chat functionality and the ability to purchase products and medications recommended by the pharmacist directly through the app (not including prescription medications)
 
 ### Design process
-Wireframing: [Figma](https://www.figma.com/file/bM4Or99ES17FgSxC3Mpqo6/Panacea-2.0).
-Project planning and User Stories: [Trello](https://trello.com/b/NTnHx7ao).
-ERD: [DbDesigner]!(https://trello-attachments.s3.amazonaws.com/5823e14fb3cc4349bed4421b/582a7af96ebec27129c00cdd/7604ccb9795bc6d42a9f859015450453/Schema.png)
+Wireframing: [Figma](https://www.figma.com/file/bM4Or99ES17FgSxC3Mpqo6/Panacea-2.0)
+
+Project planning and User Stories: [Trello](https://trello.com/b/NTnHx7ao)
+
+ERD: [DbDesigner](https://trello-attachments.s3.amazonaws.com/5823e14fb3cc4349bed4421b/582a7af96ebec27129c00cdd/7604ccb9795bc6d42a9f859015450453/Schema.png)
+
 
 ### Highlights
 
