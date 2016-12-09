@@ -34,7 +34,7 @@ ERD: [DbDesigner](https://trello-attachments.s3.amazonaws.com/5823e14fb3cc4349be
 * Cloudinary for image management
 * Geocoder for geolocation
 
-#### APIs
+### APIs
 
 * Google Maps
 
