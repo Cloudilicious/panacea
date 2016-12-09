@@ -1,9 +1,15 @@
-# README
+# Panacea
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Coder Factory Academy Term 2 Project: Two-sided marketplace app
 
-Things you may want to cover:
+### Problem
+The purpose of this app is to improve patient access to community pharmacy services. When we or a loved one are sick, we often turn to the local pharmacy as the first port of call for primary care; however, it may not always be possible or practical to go to a pharmacy. 
+
+### Solution
+Panacea can be used for communicating with a pharmacist, from the comfort of one's own home. Using this app, pharmacies can register their business on the website. Members of the community can search for a local pharmacy and chat to an available pharmacist. 
+Future releases could include video chat functionality and the ability to purchase products and medications recommended by the pharmacist directly through the app (not including prescription medications)
+
+
 
 * Ruby version
 
