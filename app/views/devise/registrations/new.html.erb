@@ -30,7 +30,7 @@
 
   <div class="field">
     <%= f.label :select %>
-    <%= f.collection_select :role_id, Role.order(:name),:id,:name, include_blank: true %>
+    <%= f.collection_select :role, Role.order(:name),:id,:name, include_blank: true %>
   </div>
 
   <div class="actions">
