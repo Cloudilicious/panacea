@@ -7,6 +7,7 @@ class CreatePharmacies < ActiveRecord::Migration[5.0]
       t.references :suburb, foreign_key: true
       t.decimal :lat, precision: 9, scale: 6
       t.decimal :lng, precision: 9, scale: 6
+      t.string :avatar
 
       t.timestamps
     end

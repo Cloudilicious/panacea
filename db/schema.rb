@@ -47,9 +47,9 @@ ActiveRecord::Schema.define(version: 20161123032941) do
     t.integer  "suburb_id"
     t.decimal  "lat",        precision: 9, scale: 6
     t.decimal  "lng",        precision: 9, scale: 6
+    t.string   "avatar"
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
-    t.string   "avatar"
     t.index ["address"], name: "index_pharmacies_on_address", unique: true
     t.index ["suburb_id"], name: "index_pharmacies_on_suburb_id"
     t.index ["user_id"], name: "index_pharmacies_on_user_id"
@@ -61,14 +61,12 @@ ActiveRecord::Schema.define(version: 20161123032941) do
     t.string   "last_name"
     t.string   "address"
     t.integer  "suburb_id"
-    t.integer  "allergy_id"
     t.string   "medicare_no"
     t.string   "concession_no"
     t.date     "date_of_birth"
     t.string   "sex"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["allergy_id"], name: "index_profiles_on_allergy_id"
     t.index ["suburb_id"], name: "index_profiles_on_suburb_id"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end

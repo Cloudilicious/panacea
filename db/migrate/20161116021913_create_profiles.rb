@@ -6,7 +6,6 @@ class CreateProfiles < ActiveRecord::Migration[5.0]
       t.string :last_name
       t.string :address
       t.references :suburb, foreign_key: true
-      t.references :allergy, foreign_key: true
       t.string :medicare_no
       t.string :concession_no
       t.date :date_of_birth
